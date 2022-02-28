@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+        <!-- <script type="text/javascript" src="../../../dist/main.js"></script> -->
+        <!-- <script type="text/javascript" src="/js/nameChecker.js"></script>
+        <script type="text/javascript" src="/js/formHandler.js"></script>
+        <link rel="stylesheet" href="/styles/resets.css">
+        <link rel="stylesheet" href="/styles/base.css">
+        <link rel="stylesheet" href="/styles/header.css">
+        <link rel="stylesheet" href="/styles/form.css">
+        <link rel="stylesheet" href="/styles/footer.css"> -->
+        
+    </head>
+
+    <body>
+
+        <header>
+            <div class="logo">
+                Natural Language Processing (NLP)
+            </div>
+            <div class="navigat">
+                navigation
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                </form>
+            </section>
+
+            <section>
+                <strong>Form Results:</strong>
+                <div id="results"></div>
+            </section>
+
+            <section>
+
+                <form onsubmit="return Client.handleSubmitTwo(event)">
+                    NLP Form : 
+                    <textarea id="text" type="text" placeholder="Right your text" cols="10" rows="5">Main dishes were quite good, but desserts were too sweet for me.</textarea>
+                    <select name="lang" id="lang">
+                        <option value="en">english</option>
+                        <option value="ar">arabic</option>
+                        <option value="fr">france</option>
+                    </select>
+
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmitTwo(event)"
+                        onsubmit="return handleSubmitTwo(event)">
+
+                </form>
+            </section>
+    
+                <section>
+                    <strong>Form Results:</strong>
+                    <table>
+                        <tr>
+                            <th>agreement</th>
+                            <th>irony</th>
+                            <th>type</th>
+                        </tr>
+                        <tr>
+                            <td id="agreement"></td>
+                            <td id="irony"></td>
+                            <td id="type"></td>
+                        </tr>
+                    </table>
+                </section>
+        </main>
+
+        <footer>
+            <p>NLP form developed by <span>omar abrash</span></p>
+        </footer>
+
+<!-- <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+        });
+    }
+</script> -->
+
+    </body>
+</html>
