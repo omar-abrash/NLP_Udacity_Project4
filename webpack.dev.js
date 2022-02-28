@@ -8,6 +8,7 @@ module.exports = {
     mode : "development",
     devtool: 'source-map',
     output: {
+        path: path.join(__dirname,'/dist'), // add bundle path
         libraryTarget: 'var',
         library: 'Client'    // you can use any word in here .
     },
@@ -31,13 +32,15 @@ module.exports = {
         }),
         new CleanWebpackPlugin({
             // Simulate the removal of files
-            dry: true,
+            dry: true, // dry mode 
             // Write Logs to Console
             verbose: true,
             // Automatically remove all unused webpack assets on rebuild
             cleanStaleWebpackAssets: true,
-            protectWebpackAssets: false
+            protectWebpackAssets: false,
+            // cleanOnceBeforeBuildPatterns: ['**/*'],
+            // cleanAfterEveryBuildPatterns: [],
+            // dangerouslyAllowCleanPatternsOutsideProject: false,
         })
     ]
-    
 }
