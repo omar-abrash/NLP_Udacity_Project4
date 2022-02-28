@@ -10,6 +10,15 @@ input,textarea {
     line-height: 16px;
     margin: 10px 0;
 }
+section {
+    #results {
+        margin-bottom: 50px;
+        border: 1px solid black;
+        font-size: 18px;
+        color: blue;
+        text-transform: capitalize;
+    }
+}
 table {
     width: 100%;
     text-align: center;

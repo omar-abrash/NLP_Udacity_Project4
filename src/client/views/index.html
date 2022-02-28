@@ -26,37 +26,33 @@
         </header>
 
         <main>
+            
             <section>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
+
+                <form class="" onsubmit="return Client.allHandleSubmit(event)">
+                    Your Name :
                     <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
-                </form>
-            </section>
 
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-            </section>
+                    NLP Form :
+                    <textarea id="text" type="text" placeholder="Right your text" cols="10"
+                        rows="5">Main dishes were quite good, but desserts were too sweet for me.</textarea>
 
-            <section>
-
-                <form onsubmit="return Client.handleSubmitTwo(event)">
-                    NLP Form : 
-                    <textarea id="text" type="text" placeholder="Right your text" cols="10" rows="5">Main dishes were quite good, but desserts were too sweet for me.</textarea>
                     <select name="lang" id="lang">
                         <option value="en">english</option>
                         <option value="ar">arabic</option>
                         <option value="fr">france</option>
                     </select>
-
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmitTwo(event)"
-                        onsubmit="return handleSubmitTwo(event)">
-
+                    
+                    <input type="submit" name="" value="submit" onclick="return Client.allHandleSubmit(event)" onsubmit="return allHandleSubmit(event)">
                 </form>
+
             </section>
-    
-                <section>
-                    <strong>Form Results:</strong>
+
+            <section>
+                <strong>Result 1:</strong>
+                <div id="results"></div>
+
+                <strong>NLP Results:</strong>
                     <table>
                         <tr>
                             <th>agreement</th>
@@ -69,7 +65,8 @@
                             <td id="type"></td>
                         </tr>
                     </table>
-                </section>
+            </section>
+
         </main>
 
         <footer>
