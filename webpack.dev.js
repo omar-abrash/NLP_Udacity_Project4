@@ -1,7 +1,9 @@
 const path = require('path')
-const webpack = require('webpack')
+const webpack = require('webpack');
+// const webpackDevServer = require('webpack-dev-server');
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 
 module.exports = {
     entry: './src/client/index.js',
@@ -11,6 +13,15 @@ module.exports = {
         path: path.join(__dirname,'/dist'), // add bundle path
         libraryTarget: 'var',
         library: 'Client'    // you can use any word in here .
+    },
+    // add this module to run webpack-dev-server
+    devServer: {
+        static:  {
+            directory: path.join(__dirname,'./src')
+        },
+        compress: true,
+        port: 8080,
+        hot: true,
     },
     module: {
         rules: [
