@@ -30,26 +30,15 @@
             <section>
 
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                    Your Name :
-                    <input id="name" type="text" name="input" value="" placeholder="Name">
-
-                    NLP Form :
-                    <textarea id="text" type="text" placeholder="Right your text" cols="10"
-                        rows="5">Main dishes were quite good, but desserts were too sweet for me.</textarea>
-
-                    <select name="lang" id="lang">
-                        <option value="en">english</option>
-                        <option value="ar">arabic</option>
-                        <option value="fr">france</option>
-                    </select>
-                    
+                    <div class="title">wright your text or URL in the text area please :</div>
+                    <textarea name="" id="text-content" rows="10">https://www.udacity.com/</textarea>
                     <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
                 </form>
 
             </section>
 
             <section>
-                <strong>Result 1:</strong>
+                <strong>massege:</strong>
                 <div id="results"></div>
 
                 <strong>NLP Results:</strong>
@@ -57,12 +46,12 @@
                         <tr>
                             <th>agreement</th>
                             <th>irony</th>
-                            <th>type</th>
+                            <th>confidence</th>
                         </tr>
                         <tr>
                             <td id="agreement"></td>
                             <td id="irony"></td>
-                            <td id="type"></td>
+                            <td id="confidence"></td>
                         </tr>
                     </table>
             </section>

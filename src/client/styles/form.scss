@@ -1,7 +1,14 @@
 form {
-    border: 1px solid #545454;
-    border-radius: 3px;
+    border: 2px solid #545454;
+    border-radius: 10px;
     padding: 40px;
+    box-shadow: 3px 3px 5px silver;
+    .title{
+        text-transform: capitalize;
+        font-size: 20px;
+        font-weight: bold;
+        color: blue;
+    }
 }
 
 input,textarea {
@@ -9,20 +16,40 @@ input,textarea {
     width: 100%;
     line-height: 16px;
     margin: 10px 0;
+    font-size: 15px;
 }
+
 section {
+    strong {
+        text-transform: capitalize;
+        font-size: 20px;
+        font-weight: bold;
+        color: blue;
+        display: block;
+        margin-bottom: 10px;
+    }
     #results {
+        height: 30px;
         margin-bottom: 50px;
         border: 1px solid black;
         font-size: 18px;
         color: blue;
         text-transform: capitalize;
+        display: flex;
+        align-items: center;
+        text-indent: 5px;
     }
 }
+
 table {
     width: 100%;
     text-align: center;
+
+    tr:last-child {
+        height: 30px;
+    }
 }
+
 th {
     padding: 5px;
     border: 3px black solid;
@@ -31,6 +58,7 @@ th {
     background-color: aqua;
     text-transform: capitalize;
 }
+
 td {
     padding: 5px;
     color: blue;
